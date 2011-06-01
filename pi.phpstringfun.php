@@ -116,9 +116,10 @@ class Phpstringfun
 			}
 			if ( is_array($result) )
 			{
-				if ($array_index)
+				if (isset($array_index))
 				{
-					$final_result = $result[$array_index];
+					$final_result = ( !empty($result[$array_index]) ) ? $result[$array_index] : '';
+
 				}
 				else
 				{
